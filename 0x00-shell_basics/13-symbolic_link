@@ -1,2 +1,2 @@
 #!/bin/bash
-touch -s /bin/ls
+ln /bin/ls
