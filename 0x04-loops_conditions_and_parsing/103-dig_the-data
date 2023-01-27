@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Write a Bash script that gives you information about the school file.
+file_h="apache-access.log"
+awk -F' ' '{ print $1, $9}' $file_h | sort | uniq -c| sort -nr
