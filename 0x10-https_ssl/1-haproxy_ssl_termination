@@ -21,7 +21,7 @@ frontend http
     default_backend app_pool
 
 frontend https
-    bind *:443 ssl crt /etc/haproxy/certs/www.holberton.online
+    bind *:443 ssl crt /etc/haproxy/haproxy.cfg
     reqadd X-Forwarded-Proto:\ https
     acl    letsencrypt-acl path_beg /.well-known/acme-challenge/
     use_backend letsencrypt-backend if letsencrypt-acl
